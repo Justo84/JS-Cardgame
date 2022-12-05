@@ -1,0 +1,21 @@
+*, *:after, *:before {box-sizing: border-box;}
+body {margin: 0;display: grid;grid-template-columns: repeat(2, 4rem);grid-template-rows: 7rem 2rem 7rem;gap: .5rem;cursor: pointer;justify-content: center;padding-top: 1rem;}
+
+.deck {height: 100%;width: 100%;border: 1px solid black;display: flex; justify-content: center;align-items: center;font-size: 3rem;border-radius: .35rem;color: #fff;user-select: none;}
+
+.computer-deck {background-color: rgb(39, 39, 176);}
+.player-deck {background-color: rgb(56, 85, 56);}
+
+.text {grid-column: span 2;display: flex; justify-content: center;align-items: center;}
+
+.card.red {color: red;}
+.card.black {color: black;}
+
+
+.card {position: relative; height: 100%;width: 100%;border: 1px solid black; border-radius: .35rem;display: flex; justify-content: center;align-items: center;font-size: 3rem;}
+
+.card:before, .card:after {content: attr(data-value);font-size: 1rem;position: absolute;letter-spacing: .1em;}
+
+.card:before {top: .5rem;left: .5rem;}
+
+.card:after {bottom: .5rem; right: .5rem;transform: rotate(180deg);}
